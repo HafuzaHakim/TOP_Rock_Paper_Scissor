@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="game-title">ELEMENTAL RUMBLE</h1>
+    </header>
+
+    <main>
+      <section class="container">
+        <div class="dynamic-text">
+          <h2 class="main-text">Choose your element</h2>
+          <p class="sub-text">First to collect 5 point will be the champion</p>
+        </div>
+        <div class="dynamic-card">
+          <div class="player-icon">
+            <div class="img-container">
+              <img src="/img/initial-image.png" alt="" id="player-icon" />
+            </div>
+
+            <h3 class="score-text">
+              Player: <span class="player-score">0</span>
+            </h3>
+          </div>
+          <div class="computer-icon">
+            <div class="img-container">
+              <img src="/img/initial-image.png" alt="" id="computer-icon" />
+            </div>
+            <h3 class="score-text">
+              Computer: <span class="computer-score">0</span>
+            </h3>
+          </div>
+        </div>
+        <div class="choices">
+          <button class="choice" id="Fire">
+            <img src="/img/Fire.png" alt="Fire" />
+          </button>
+          <button class="choice" id="Water">
+            <img src="/img/Water.png" alt="Water" />
+          </button>
+          <button class="choice" id="Grass">
+            <img src="/img/Grass.png" alt="Grass" />
+          </button>
+        </div>
+      </section>
+    </main>
+    <div class="modal hidden">
+      <button class="replay">Play again?</button>
+    </div>
+  </body>
+</html>

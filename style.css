@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&family=Rubik+Mono+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #223843;
+  background-color: #efefef;
+  font-family: "Roboto";
+}
+
+header {
+  color: #001514;
+  background-color: #fb6107;
+  font-family: "Rubik Mono One";
+}
+
+.game-title {
+  font-size: 3.5rem;
+  text-align: center;
+  padding: 0.5em 0;
+}
+
+section {
+  width: 85%;
+  max-width: 1280px;
+  margin-inline: auto;
+  font-size: 1.25rem;
+}
+
+.dynamic-text {
+  text-align: center;
+  margin: 3em 0;
+}
+
+.sub-text {
+  padding-top: 0.5em;
+}
+
+.dynamic-card {
+  display: flex;
+  justify-content: center;
+  gap: 5em;
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.img-container {
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.choices {
+  display: flex;
+  justify-content: center;
+  gap: 2.5em;
+}
+
+.choice {
+  padding: 1.25em;
+  border: none;
+  border-radius: 8px;
+  background-color: #e1e6e1;
+}
+
+.choice:hover {
+  cursor: pointer;
+}
+
+.choice:active {
+  background-color: #e1e6e18e;
+}
+
+.modal {
+  z-index: 10;
+  background-color: #2238437c;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.replay {
+  padding: 1em 3em;
+  border: none;
+  border-radius: 16px;
+  font-size: 2rem;
+  font-family: "Rubik Mono One";
+  color: #001514;
+  background-color: #fb6007;
+}
+
+.replay:hover {
+  cursor: pointer;
+}
+
+.replay:active {
+  background-color: #c44d08;
+}
+
+img {
+  width: 100%;
+  max-width: 100px;
+}
+
+.hidden {
+  display: none;
+}
