@@ -73,8 +73,8 @@ function resetScore() {
 }
 
 function updateIcon(playerSelection, computerSelection) {
-  playerIcon.setAttribute("src", `/img/${playerSelection}.png`);
-  computerIcon.setAttribute("src", `/img/${computerSelection}.png`);
+  playerIcon.setAttribute("src", `img/${playerSelection}.png`);
+  computerIcon.setAttribute("src", `img/${computerSelection}.png`);
 }
 
 playerChoices.forEach((button) => {
