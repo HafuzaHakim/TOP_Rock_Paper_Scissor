@@ -5,6 +5,8 @@ const playerRunningScore = document.querySelector(".player-score");
 const computerRunningScore = document.querySelector(".computer-score");
 const roundResult = document.querySelector(".main-text");
 const gameOutcome = document.querySelector(".sub-text");
+let playerIconParent = document.querySelector("#player-icon-container");
+let computerIconParent = document.querySelector("#computer-icon-container");
 let playerIcon = document.querySelector("#player-icon");
 let computerIcon = document.querySelector("#computer-icon");
 const modalBtn = document.querySelector(".modal");
@@ -73,8 +75,19 @@ function resetScore() {
 }
 
 function updateIcon(playerSelection, computerSelection) {
-  playerIcon.setAttribute("src", `img/${playerSelection}.png`);
-  computerIcon.setAttribute("src", `img/${computerSelection}.png`);
+  const PLAYER_IMG = document.createElement("img");
+  const COMPUTER_IMG = document.createElement("img");
+
+  PLAYER_IMG.setAttribute("id", "player-icon");
+  PLAYER_IMG.setAttribute("src", `img/${playerSelection}.png`);
+  COMPUTER_IMG.setAttribute("id", "computer-icon");
+  COMPUTER_IMG.setAttribute("src", `img/${computerSelection}.png`);
+
+  playerIconParent.replaceChild(PLAYER_IMG, playerIcon);
+  computerIconParent.replaceChild(COMPUTER_IMG, computerIcon);
+
+  playerIcon = document.querySelector("#player-icon");
+  computerIcon = document.querySelector("#computer-icon");
 }
 
 playerChoices.forEach((button) => {
@@ -93,4 +106,18 @@ playerChoices.forEach((button) => {
 replayBtn.addEventListener("click", () => {
   modalBtn.classList.add("hidden");
   resetScore();
+
+  const PLAYER_IMG = document.createElement("img");
+  const COMPUTER_IMG = document.createElement("img");
+
+  PLAYER_IMG.setAttribute("id", "player-icon");
+  PLAYER_IMG.setAttribute("src", `img/initial-image.png`);
+  COMPUTER_IMG.setAttribute("id", "computer-icon");
+  COMPUTER_IMG.setAttribute("src", `img/initial-image.png`);
+
+  playerIconParent.replaceChild(PLAYER_IMG, playerIcon);
+  computerIconParent.replaceChild(COMPUTER_IMG, computerIcon);
+
+  playerIcon = document.querySelector("#player-icon");
+  computerIcon = document.querySelector("#computer-icon");
 });
